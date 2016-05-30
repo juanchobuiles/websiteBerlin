@@ -1,0 +1,271 @@
+@import 'slide.styl'
+@import 'hover.css'
+p
+    margin-top .25em
+.contenido
+    min-width: 100%
+    background-color rgba(255,255,255,0.6)
+
+.servicios
+    font-size 2vh
+    display flex
+    flex-wrap wrap
+    justify-content space-around
+    height 100%
+    margin auto
+    padding 10px
+    &-imagen
+        margin auto
+        padding 1em 0
+        a
+            border-radius 150px
+
+        h2
+            text-align center
+
+        &-camping
+            width 230px
+            height 230px
+            border-bottom outset 3px
+            border-color #fff
+            border-radius 150px
+            background url('./images/camping.jpg') no-repeat
+        &-restaurante
+            width 230px
+            border-bottom outset 3px
+            border-color #fff
+            height 230px
+            border-radius 150px
+            background url('./images/RESTAURANTE.jpg') no-repeat
+        &-habitaciones
+            width 230px
+            height 230px
+            border-bottom outset 3px
+            border-color #fff
+            border-radius 150px
+            background url('./images/HABITACIONES.jpg') no-repeat
+        &-rapitienda
+            width 230px
+            height 230px
+            border-bottom outset 3px
+            border-color #fff
+            border-radius 150px
+            background url('./images/RAPITIENDA.jpg') no-repeat
+    &-camping-especific
+        width 60%
+        &-titulo
+            display flex
+            justify-content: space-between
+            h2
+                color $colorVerde
+                font-size 5em
+                opacity: 0.5
+                margin 1% 3%
+        p
+            font-weight: bold
+            font-size 16px
+
+    &-galeria-camping
+        height 252px
+        border 5px solid $colorVerde
+
+    &-restaurante-especific
+        width 65%
+        &-titulo
+            display flex
+            justify-content: space-between
+            h2
+                color $colorcafe
+                font-size 4vw
+                opacity: 0.5
+                margin 0 2%
+        p
+            font-weight: bold
+            font-size 16px
+
+    &-galeria-restaurante
+        height 252px
+        border 5px solid $colorEfectoMenu
+
+    &-habitaciones-especific
+        width 60%
+        &-titulo
+            display flex
+            justify-content: space-between
+            h2
+                color $colorazul
+                font-size 4em
+                opacity: 0.5
+                margin 0 3%
+        p
+            font-weight: bold
+            font-size 16px
+
+    &-galeria-habitaciones
+        height 252px
+        border 5px solid $colorazul
+
+    &-rapitienda-especific
+        width 65%
+        &-titulo
+
+            display flex
+            justify-content: space-between
+            h2
+                color $colorrojo
+                font-size 5vw
+                opacity: 0.5
+                margin 0 3%
+        p
+            font-weight: bold
+            font-size 16px
+
+    &-galeria-rapitienda
+        height 252px
+        border 5px solid $colorrojo
+.contacto
+    display: flex
+    justify-content: space-between
+    flex-wrap wrap
+    padding-top: .5em;
+    font-size: 2.5vh;
+    box-sizing: border-box;
+
+    &-mapa
+        margin .5em auto
+    &-formulario
+        margin: .5em auto
+        min-height: 730px
+        &-datos
+            h4
+                padding-top .3em
+                padding-left: .5em
+            a
+                color #000
+                padding-left: 1.5em
+                text-decoration none
+            a:hover
+                color $colorEfectoMenu
+
+input[type="tel"], input[type="email"], input[type="text"], textarea
+    background #EEE
+    border-radius .25em
+    color: $colorEfectoMenu
+    font-size 1em
+    padding .25em
+    margin 0 .5em .5em
+    width 95%
+
+
+input[type="email"]:focus, input[type="text"]:focus, textarea:focus , input[type="tel"]:focus
+    background-color rgba(238,122,32,0.5)
+
+input[type="submit"]
+    background: $colorHeader
+    border-radius 0 .25em
+    color: $ColorFuenteHeader
+    font-size 1.25em
+    padding .25em
+
+
+input[type="submit"]:hover
+    background $colorEfectoMenu
+    border-radius .25em 0
+    color $colorEfectoFuente
+    cursor pointer
+
+fieldset
+    border-color $colorEfectoMenu
+    background-color rgba(255,255,255,1)
+    border-radius .5em
+    padding-top .5em
+    margin-top .25em
+    padding-left .5em
+textarea
+    resize none
+#contacto
+    margin-top 1em
+#btnEnviar
+    text-align center
+
+#precarga , #respuesta
+    display none
+
+@media (max-width: 1024px)
+   .servicios
+       &-rapitienda-especific
+            width 90%
+            &-titulo
+                h2
+                    margin auto
+                    font-size 6.5vw
+
+        &-galeria-rapitienda
+            height 250px
+
+        &-camping-especific
+            width 90%
+            &-titulo
+                h2
+                    margin auto
+                    font-size 7vw
+
+        &-galeria-camping
+            height 250px
+
+
+        &-restaurante-especific
+            width 90%
+            &-titulo
+                h2
+                 margin auto
+                 font-size 6vw
+
+
+        &-galeria-restaurante
+            height 250px
+
+
+        &-habitaciones-especific
+            width 90%
+            &-titulo
+                h2
+                    margin auto
+                    font-size 4vw
+
+        &-galeria-habitaciones
+            height 250px
+    .contacto
+        &-formulario
+            width 80%
+            min-height: 650px
+        &-mapa
+            iframe
+                width 650px
+
+@media (max-width: 800px)
+    .servicios
+        &-rapitienda-especific , &-habitaciones-especific ,  &-restaurante-especific , &-camping-especific
+            &-titulo
+                justify-content center
+    .contacto
+        &-formulario
+            width 98%
+        &-mapa
+           iframe
+                width 450px
+@media (max-width: 430px)
+    .servicios
+        &-galeria-habitaciones,&-galeria-restaurante,&-galeria-camping,&-galeria-rapitienda
+            height 200px
+    .contacto
+        &-mapa
+           iframe
+                width 300px
+@media (max-width: 320px)
+    .servicios
+        &-galeria-habitaciones,&-galeria-restaurante,&-galeria-camping,&-galeria-rapitienda
+            height 170px
+
+
+

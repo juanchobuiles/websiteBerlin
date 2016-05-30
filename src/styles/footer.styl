@@ -1,0 +1,48 @@
+.footer
+    position: absolute
+    font-size 12px
+    background-color $colorHeader
+    color $ColorFuenteHeader
+    width 100%
+    height 70px
+    display flex
+    flex-wrap: wrap
+    justify-content: space-around
+    &-corp
+        padding 1px 0
+        text-align center
+        width 60%
+        margin: auto
+        a
+            color #ffff
+            text-decoration none
+        a:hover
+            color $colorEfectoFuente
+        h4
+            padding 0 0 0 10%
+
+    &-socialmedia
+        padding 1em 1em 1em 0
+    &-cyj
+        margin: auto 0
+        padding .3em 0 .3em 1em
+
+@media (max-width: 1024px)
+    .footer
+        height 12%
+
+@media (max-width: 600px)
+    .footer
+        height 15%
+        &-corp
+            width 100%
+            padding-top: 0.5em
+            order -1
+        &-socialmedia
+            width 100%
+            padding: 0
+            text-align: center
+@media (max-width: 600px)
+    .footer
+        height 20%
+

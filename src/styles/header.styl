@@ -1,0 +1,175 @@
+.menu_bar
+    display none
+
+
+.header
+    width 100%
+    nav
+        border-bottom outset 3px
+        border-color #95511c
+        z-index 1000
+
+        width 100%
+        margin 20px 0 0 0
+
+        background $colorHeader
+        ul
+
+            display flex
+            flex-wrap wrap
+            justify-content space-around
+            list-style none
+            .logo a
+                color $colorHeader
+
+            li
+
+                margin-left 10px
+                display inline-block
+                position relative
+
+               a
+
+                   color #fff
+                   display block
+                   text-decoration none
+                   padding  10px
+
+                   span
+                       margin-right 10px
+                .children
+                    display  none
+                    background $colorEfectoMenu
+                    position  absolute
+                    width  150%
+                    z-index:1000
+
+                    li
+                        margin-top 2px
+                        display block
+                        overflow  hidden
+                        border-bottom  1px solid rgba(255,255,255,.5)
+                        a
+                            display block
+                            color #fff
+                            span
+                                float  right
+                                position  relative
+                                top 3px
+                                margin-right 0
+                                margin-left 10px
+
+            .caret
+                position  relative
+                top 3px
+                margin-left 10px
+                margin-right 0px
+            .logo
+                padding-right  5%
+
+
+            li:hover
+                background $colorEfectoMenu
+                a:hover
+                 color $colorEfectoFuente
+
+                .children
+                    display block
+                    a:hover
+                        color $colorEfectoFuente
+
+    &-logo
+        position absolute
+        display inline-block
+        z-index 3
+        top -20px
+        left 43%
+@media (max-width: 1024px)
+    .header
+        display: flex
+        background-color $colorHeader
+        border-bottom outline tset 3px
+        border-color #95511c
+
+        nav ul
+            .logo
+                padding-right: 0
+                order -1
+                a
+                    color #fff
+        &-logo
+            order -1
+            margin 0 auto
+            padding-left 1em
+            position static
+            border-bottom outset 3px
+            border-color #95511c
+
+
+@media (max-width: 800px)
+
+    body
+        padding-top 80px
+        font-size 2vh
+    .menu_bar
+        z-index: 3
+        display flex
+        width 100%
+        position  fixed
+        top 0
+        background $colorHeader
+
+        .bt-menu
+            padding 0 .5em
+            width 100%
+            display flex
+            justify-content: space-between
+            color #fff
+            overflow hidden
+            font-size 25px
+            font-weight bold
+            text-decoration none
+        i
+            padding 0 .5em
+            font-size 6vh
+            margin auto 0
+
+    .header nav
+        width   40%
+        height   calc(100% - 80px);
+        position   fixed
+        right  100%
+        margin   0
+        overflow   scroll
+        ul
+             flex-direction: column
+        ul li
+            padding 0.5em
+            display  block
+            border-bottom 1px solid rgba(255,255,255,.5)
+
+            a
+                display block
+
+            .children
+                width  100%
+                position  relative
+
+                li a
+                    margin-left 20px
+        .caret
+            float right
+
+        ul li:hover .children
+            display none
+    .header-logo
+        display none
+
+@media (max-width: 320px)
+    .header nav
+        width   60%
+
+
+
+
+
